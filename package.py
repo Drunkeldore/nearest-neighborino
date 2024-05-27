@@ -15,15 +15,15 @@ class Package:
         self.weight = weight
         self.status = status
         # deliveryTime and departure Time will be updated later
-        self.deliveryTime = 0
-        self.deparTime = 0
+        self.deliveryTime = None
+        self.deparTime = None
 
     #method for updating status of package based on time comparison
     def status_update(self, time):
-        if (time > deparTime) and (time < deliveryTime):
+        if (time > self.deparTime) and (time < self.deliveryTime):
             self.status = "In route"
-        elif (time > deliveryTime):
-            self.status = "Delivered"
+        elif (time > self.deliveryTime):
+            self.status = f"Delivered, {self.deliveryTime}"
         else:
             self.status = "At the Hub"
 

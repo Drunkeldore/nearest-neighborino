@@ -12,7 +12,8 @@ class DeliveryTruck:
         self.currentTime = initalTime
 
     def status(self):
-        print(f"Current Miles: {miles}")
-        print(f"Current Packages Aboard: {packages}")
-        print(f"Current Address: {currentLocation}")
-        print(f"Current Time: {CurrentTime}")
+        return (f"Current Miles: {self.miles}\n"
+        f"Current Packages Aboard: {self.packages}\n"
+        f"Current Address: {self.currentLocation}\n"
+        f"Current Time: {self.currentTime}")
+   
