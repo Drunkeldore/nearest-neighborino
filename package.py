@@ -1,3 +1,7 @@
+# Nick Porter
+# Student ID: 011452649
+
+
 class Package:
     """Creates Package Object that takes id, address, city, state, zip, deadline, weight, status, deliveryTime, and departure Time as arguments"""
     # Created package class to create objects for each package
@@ -22,4 +26,8 @@ class Package:
             self.status = "Delivered"
         else:
             self.status = "At the Hub"
+
+    #Method for checking cotent of package testing purposes.
+    def package_content(self):
+        return(self.id, self.address, self.city, self.state, self.zip, self.deadline, self.weight, self.status)
 

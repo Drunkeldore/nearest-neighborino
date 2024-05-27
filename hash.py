@@ -42,6 +42,11 @@ class HashTable:
         # print(bucket_list)
         # print(bucket)
 
+    #List all content of hash table
+    def printAll(self):
+        for each in range(len(self.table)):
+            for package in self.table[each]:
+                print(package[1].package_address)
 
 # Testing things as needed
 # if __name__ == "__main__":
